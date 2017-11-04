@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="XSKTDB">
+  <DataContextMoniker Name="/XSKTDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="86c0c70a-ae99-42cd-bc6e-111f65357669" absoluteBounds="0.5, 0.75, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/XSKTDBDataContext/LocationPrize" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9cfed96a-18ca-4793-aea4-504a5df265d9" absoluteBounds="0.515, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5a112259-cb92-422a-9dd2-3cdb06a0bcdc" absoluteBounds="0.875, 4.375, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/XSKTDBDataContext/Prize" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67cb4124-17fb-4435-bab6-2811eb89c891" absoluteBounds="0.89, 4.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70490869-2e49-4ede-a126-547e046d14df" absoluteBounds="3.5, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/XSKTDBDataContext/PrizeDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="569ad1f6-f76c-4f96-91fe-3a3c350c8e8d" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.40949625651042); (3.5 : 1.40949625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XSKTDBDataContext/LocationPrize/LocationPrize_PrizeDetail" />
+      <nodes>
+        <classShapeMoniker Id="86c0c70a-ae99-42cd-bc6e-111f65357669" />
+        <classShapeMoniker Id="70490869-2e49-4ede-a126-547e046d14df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.71875 : 4.375); (2.71875 : 2.2300439453125); (3.5 : 2.2300439453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/XSKTDBDataContext/Prize/Prize_PrizeDetail" />
+      <nodes>
+        <classShapeMoniker Id="5a112259-cb92-422a-9dd2-3cdb06a0bcdc" />
+        <classShapeMoniker Id="70490869-2e49-4ede-a126-547e046d14df" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
