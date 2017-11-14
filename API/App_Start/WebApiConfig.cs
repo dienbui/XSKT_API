@@ -19,6 +19,11 @@ namespace API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "getlottezybydate",
+                routeTemplate: "lottezy/{id}"
+            );
             config.Formatters.Remove(config.Formatters.XmlFormatter);
         }
     }

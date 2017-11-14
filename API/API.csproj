@@ -135,9 +135,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ConvertToDB.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\ViewModelLocationPrize.cs" />
     <Compile Include="Models\ViewModelPrize.cs" />
+    <Compile Include="Models\ViewModelStatiscal.cs" />
+    <Compile Include="Models\ViewModelUpdateLottezy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

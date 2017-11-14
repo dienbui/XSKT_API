@@ -7,7 +7,7 @@ namespace API.Models
 {
     public class ViewModelLocationPrize
     {
-        public string lottezyId { get; set; }
-        public string lottezyName { get; set; }
+        public string LottezyId { get; set; }
+        public string LottezyName { get; set; }
     }
 }
