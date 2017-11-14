@@ -152,6 +152,8 @@
     </Compile>
     <Compile Include="JWT\TokenService.cs" />
     <Compile Include="Models\ConvertToDB.cs" />
+    <Compile Include="Models\LoginRequest.cs" />
+    <Compile Include="Models\LoginResponse.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\TokenData.cs" />
     <Compile Include="Models\ViewModelLocationPrize.cs" />
