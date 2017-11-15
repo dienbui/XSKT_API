@@ -1,4 +1,6 @@
-﻿using API.Models;
+﻿using API.JWT;
+using API.Models;
+using API.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +14,12 @@ namespace API.Controllers
 {
     public class LottezyController : ApiController
     {
+        TokenService tokenService = new TokenService();
+
         public LottezyController()
         {
 
         }
-
 
         /// <summary>
         /// Get_List_Lottezy
@@ -41,7 +44,6 @@ namespace API.Controllers
             }
             else
             {
-
                 resp.code = 0;
                 var view = new List<ViewModelLocationPrize>();
                 foreach (var item in listLocationPrize)
@@ -55,11 +57,9 @@ namespace API.Controllers
                     );
                 }
                 resp.data = view;
-
-
-            }
-            return Ok(resp);
         }
+         return Ok(resp);
+    }
 
         /// <summary>
         /// GetLottezyByDate ko chua date
@@ -68,7 +68,7 @@ namespace API.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("lottezy/{lottezyId}")]
-        public IHttpActionResult GetLottezyByDate(int lottezyId)
+        public IHttpActionResult GetLottezyByDate(int lottezyId )
         {
             Prize kq = null;
             ViewModelPrize viewModelPrize = null;
@@ -222,6 +222,10 @@ namespace API.Controllers
         {
             try
             {
+                // MaiPH
+                // check login
+                String token = Request.Headers.Authorization.Scheme;
+                tokenService.verifyToken(token);
 
 
                 using (var db = new XSKTDBDataContext())
@@ -272,7 +276,11 @@ namespace API.Controllers
         {
             try
             {
-
+                // MaiPH
+                // check login
+                String token = Request.Headers.Authorization.Scheme;
+                tokenService.verifyToken(token);
+                //
                 using (var db = new XSKTDBDataContext())
                 {
                     db.DeferredLoadingEnabled = false;
