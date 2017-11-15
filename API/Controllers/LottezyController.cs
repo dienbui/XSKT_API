@@ -15,10 +15,10 @@ namespace API.Controllers
     public class LottezyController : ApiController
     {
         TokenService tokenService = new TokenService();
-
+        
         public LottezyController()
         {
-
+            
         }
 
         /// <summary>
